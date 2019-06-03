@@ -1,0 +1,72 @@
+二月 23, 2019 11:01:33 上午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+二月 23, 2019 11:01:33 上午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+二月 23, 2019 11:01:37 上午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'cas'
+二月 23, 2019 11:01:38 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+二月 23, 2019 11:01:38 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+二月 23, 2019 11:01:38 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@67ed0243')
+二月 23, 2019 11:43:26 上午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+二月 23, 2019 11:43:26 上午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+二月 23, 2019 11:43:29 上午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'cas'
+二月 23, 2019 11:43:30 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+二月 23, 2019 11:43:30 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+二月 23, 2019 11:43:30 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@67ed0243')
+二月 23, 2019 1:34:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+二月 23, 2019 1:34:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+二月 23, 2019 1:34:43 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'cas'
+二月 23, 2019 1:34:45 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+二月 23, 2019 1:34:45 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+二月 23, 2019 1:34:45 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@2bc65a0a')
+二月 23, 2019 1:37:01 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+二月 23, 2019 1:37:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+二月 23, 2019 1:37:06 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'cas'
+二月 23, 2019 1:37:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+二月 23, 2019 1:37:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+二月 23, 2019 1:37:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@2fbcdd9d')
+二月 23, 2019 3:26:51 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+二月 23, 2019 3:26:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+二月 23, 2019 3:26:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'cas'
+二月 23, 2019 3:27:05 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+二月 23, 2019 3:27:05 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+二月 23, 2019 3:27:05 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@2fbcdd9d')
+二月 23, 2019 3:29:57 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+二月 23, 2019 3:29:57 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+二月 23, 2019 3:30:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'cas'
+二月 23, 2019 3:30:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+二月 23, 2019 3:30:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+二月 23, 2019 3:30:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@3d9625d5')

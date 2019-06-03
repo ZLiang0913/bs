@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [23/Mar/2019:13:33:42 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 34420
+0:0:0:0:0:0:0:1 - - [23/Mar/2019:13:33:54 +0800] "POST /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 302 -
+127.0.0.1 - - [23/Mar/2019:13:33:55 +0800] "GET /cas/serviceValidate?ticket=ST-1-aJACQbHNfaFZ4mc6gUeH-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 196
+0:0:0:0:0:0:0:1 - - [23/Mar/2019:16:17:54 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 34420
+0:0:0:0:0:0:0:1 - - [23/Mar/2019:16:17:55 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [23/Mar/2019:16:17:58 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 34420
+0:0:0:0:0:0:0:1 - - [23/Mar/2019:16:18:15 +0800] "POST /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 302 -
+127.0.0.1 - - [23/Mar/2019:16:18:15 +0800] "GET /cas/serviceValidate?ticket=ST-2-Wp1N55K2yZ5PtXmoTqTT-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 196

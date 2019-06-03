@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:00:31 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 200 4086
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:00:51 +0800] "POST /cas/login?service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 200 4144
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:01:21 +0800] "POST /cas/login?service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 302 -
+127.0.0.1 - - [18/Feb/2019:14:01:21 +0800] "GET /cas/serviceValidate?ticket=ST-1-uVVO6Z3DAac6tFEAnfug-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 200 196
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:02:04 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9001%2Findex.jsp HTTP/1.1" 302 -
+127.0.0.1 - - [18/Feb/2019:14:02:04 +0800] "GET /cas/serviceValidate?ticket=ST-2-QkQ2kDC1WVogWRfkQgR4-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9001%2Findex.jsp HTTP/1.1" 200 196
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:03:00 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 302 -
+127.0.0.1 - - [18/Feb/2019:14:03:00 +0800] "GET /cas/serviceValidate?ticket=ST-3-gPBo5EeFXKyHYZmXrFGn-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 200 196
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:07:17 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 200 4086
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:07:36 +0800] "POST /cas/login?service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 302 -
+127.0.0.1 - - [18/Feb/2019:14:07:36 +0800] "GET /cas/serviceValidate?ticket=ST-1-dclLWskwMoxdUhrHsfqU-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 200 196
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:07:42 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9001%2F HTTP/1.1" 302 -
+127.0.0.1 - - [18/Feb/2019:14:07:42 +0800] "GET /cas/serviceValidate?ticket=ST-2-ShpLKfXHEJsxzPVKUime-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9001%2F HTTP/1.1" 200 196
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:07:45 +0800] "GET /cas/logout?service=http://localhost:9003/index2.html HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Feb/2019:14:09:10 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9003%2Flogin%2Fcas HTTP/1.1" 200 4086

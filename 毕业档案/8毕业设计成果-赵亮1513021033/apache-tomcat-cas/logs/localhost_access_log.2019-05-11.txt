@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 34393
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/css/pages-login.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/img/qq.png HTTP/1.1" 200 1539
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/js/echarts.js HTTP/1.1" 200 2194030
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/js/plugins/jquery/jquery.min.js HTTP/1.1" 200 95974
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/js/plugins/jquery.easing/jquery.easing.min.js HTTP/1.1" 200 5643
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/js/plugins/sui/sui.min.js HTTP/1.1" 200 105315
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/js/plugins/jquery-placeholder/jquery.placeholder.min.js HTTP/1.1" 200 2162
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/js/pages/login.js HTTP/1.1" 200 58
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/img/sina.png HTTP/1.1" 200 1786
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/img/ali.png HTTP/1.1" 200 1557
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/img/weixin.png HTTP/1.1" 200 1644
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:52 +0800] "GET /cas/img/icons.png HTTP/1.1" 200 37691
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:56:53 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:57:06 +0800] "POST /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 34449
+0:0:0:0:0:0:0:1 - - [11/May/2019:11:57:10 +0800] "POST /cas/login?service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 302 -
+127.0.0.1 - - [11/May/2019:11:57:11 +0800] "GET /cas/serviceValidate?ticket=ST-1-t2KLacASNYQbRLLeUnG3-cas01.example.org&service=http%3A%2F%2Flocalhost%3A9004%2Flogin%2Fcas HTTP/1.1" 200 196

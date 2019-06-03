@@ -1,0 +1,389 @@
+二月 19, 2019 3:23:11 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\spark\scala-2.11.8\bin;C:\WINDOWS\System32\OpenSSH\;D:\apache-maven-3.2.2\bin;C:\hadoop\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Users\ZLian\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Docker Toolbox;.
+二月 19, 2019 3:23:11 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:23:11 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:23:11 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 584 ms
+二月 19, 2019 3:23:11 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+二月 19, 2019 3:23:11 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.52
+二月 19, 2019 3:23:11 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-cas\webapps\cas.war
+二月 19, 2019 3:23:21 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\docs
+二月 19, 2019 3:23:21 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\examples
+二月 19, 2019 3:23:21 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\host-manager
+二月 19, 2019 3:23:21 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\manager
+二月 19, 2019 3:23:22 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\ROOT
+二月 19, 2019 3:23:22 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:23:22 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:23:22 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 10330 ms
+二月 19, 2019 3:27:23 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\spark\scala-2.11.8\bin;C:\WINDOWS\System32\OpenSSH\;D:\apache-maven-3.2.2\bin;C:\hadoop\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Users\ZLian\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Docker Toolbox;.
+二月 19, 2019 3:27:23 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:27:23 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:27:23 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 986 ms
+二月 19, 2019 3:27:24 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+二月 19, 2019 3:27:24 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.52
+二月 19, 2019 3:27:24 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-cas\webapps\cas.war
+二月 19, 2019 3:27:34 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\docs
+二月 19, 2019 3:27:34 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\examples
+二月 19, 2019 3:27:34 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\host-manager
+二月 19, 2019 3:27:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\manager
+二月 19, 2019 3:27:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\ROOT
+二月 19, 2019 3:27:35 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:27:35 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:27:35 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 11353 ms
+二月 19, 2019 3:29:52 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\spark\scala-2.11.8\bin;C:\WINDOWS\System32\OpenSSH\;D:\apache-maven-3.2.2\bin;C:\hadoop\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Users\ZLian\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Docker Toolbox;.
+二月 19, 2019 3:29:53 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:29:53 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:29:53 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 639 ms
+二月 19, 2019 3:29:53 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+二月 19, 2019 3:29:53 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.52
+二月 19, 2019 3:29:53 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-cas\webapps\cas.war
+二月 19, 2019 3:30:01 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\docs
+二月 19, 2019 3:30:02 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\examples
+二月 19, 2019 3:30:02 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\host-manager
+二月 19, 2019 3:30:02 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\manager
+二月 19, 2019 3:30:02 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\ROOT
+二月 19, 2019 3:30:02 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:30:03 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:30:03 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 9854 ms
+二月 19, 2019 3:45:30 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\spark\scala-2.11.8\bin;C:\WINDOWS\System32\OpenSSH\;D:\apache-maven-3.2.2\bin;C:\hadoop\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Users\ZLian\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Docker Toolbox;.
+二月 19, 2019 3:45:31 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:45:31 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:45:31 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 566 ms
+二月 19, 2019 3:45:31 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+二月 19, 2019 3:45:31 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.52
+二月 19, 2019 3:45:31 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-cas\webapps\cas.war
+二月 19, 2019 3:45:39 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\docs
+二月 19, 2019 3:45:39 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\examples
+二月 19, 2019 3:45:41 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\host-manager
+二月 19, 2019 3:45:41 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\manager
+二月 19, 2019 3:45:41 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\ROOT
+二月 19, 2019 3:45:41 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 3:45:41 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 3:45:41 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 10419 ms
+二月 19, 2019 4:20:25 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\spark\scala-2.11.8\bin;C:\WINDOWS\System32\OpenSSH\;D:\apache-maven-3.2.2\bin;C:\hadoop\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Users\ZLian\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Docker Toolbox;.
+二月 19, 2019 4:20:26 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 4:20:26 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 4:20:26 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 538 ms
+二月 19, 2019 4:20:26 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+二月 19, 2019 4:20:26 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.52
+二月 19, 2019 4:20:26 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-cas\webapps\cas.war
+二月 19, 2019 4:20:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\docs
+二月 19, 2019 4:20:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\examples
+二月 19, 2019 4:20:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\host-manager
+二月 19, 2019 4:20:36 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\manager
+二月 19, 2019 4:20:36 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\ROOT
+二月 19, 2019 4:20:36 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 4:20:36 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 4:20:36 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 10146 ms
+二月 19, 2019 8:57:17 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\spark\scala-2.11.8\bin;C:\WINDOWS\System32\OpenSSH\;D:\apache-maven-3.2.2\bin;C:\hadoop\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Users\ZLian\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Docker Toolbox;.
+二月 19, 2019 8:57:17 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 8:57:17 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 8:57:17 下午 org.apache.coyote.AbstractProtocol init
+严重: Failed to initialize end point associated with ProtocolHandler ["ajp-bio-8009"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 16 more
+
+二月 19, 2019 8:57:17 下午 org.apache.catalina.core.StandardService initInternal
+严重: Failed to initialize connector [Connector[AJP/1.3-8009]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 16 more
+
+二月 19, 2019 8:57:17 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 761 ms
+二月 19, 2019 8:57:17 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+二月 19, 2019 8:57:17 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.52
+二月 19, 2019 8:57:17 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-cas\webapps\cas.war
+二月 19, 2019 8:57:56 下午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\spark\scala-2.11.8\bin;C:\WINDOWS\System32\OpenSSH\;D:\apache-maven-3.2.2\bin;C:\hadoop\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Users\ZLian\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Docker Toolbox;.
+二月 19, 2019 8:57:56 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 8:57:56 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 8:57:56 下午 org.apache.coyote.AbstractProtocol init
+严重: Failed to initialize end point associated with ProtocolHandler ["ajp-bio-8009"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 16 more
+
+二月 19, 2019 8:57:56 下午 org.apache.catalina.core.StandardService initInternal
+严重: Failed to initialize connector [Connector[AJP/1.3-8009]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 16 more
+
+二月 19, 2019 8:57:56 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 682 ms
+二月 19, 2019 8:57:56 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+二月 19, 2019 8:57:56 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.52
+二月 19, 2019 8:57:56 下午 org.apache.catalina.startup.HostConfig deployWAR
+信息: Deploying web application archive C:\apache-tomcat-cas\webapps\cas.war
+二月 19, 2019 8:58:04 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\docs
+二月 19, 2019 8:58:04 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\examples
+二月 19, 2019 8:58:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\host-manager
+二月 19, 2019 8:58:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\manager
+二月 19, 2019 8:58:05 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory C:\apache-tomcat-cas\webapps\ROOT
+二月 19, 2019 8:58:05 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 8:58:05 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 8845 ms
+二月 19, 2019 8:58:05 下午 org.apache.catalina.core.StandardServer await
+严重: StandardServer.await: create[localhost:8005]: 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:426)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:777)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:723)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:321)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+二月 19, 2019 8:58:05 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 8:58:05 下午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 8:58:05 下午 org.apache.catalina.core.StandardService stopInternal
+信息: Stopping service Catalina
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [perf4j-async-stats-appender-sink-CoalescingStatistics] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [FileWatchdog] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-6] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-7] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-8] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-9] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+严重: The web application [/cas] appears to have started a thread named [scheduler_Worker-10] but has failed to stop it. This is very likely to create a memory leak.
+二月 19, 2019 8:58:05 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 8:58:05 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["http-bio-9100"]
+二月 19, 2019 8:58:05 下午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["ajp-bio-8009"]
+二月 19, 2019 8:58:05 下午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["ajp-bio-8009"]
