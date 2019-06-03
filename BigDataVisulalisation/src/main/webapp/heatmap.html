@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分时段学习人数分析</title>
+    <!-- 使用单文件引入的方式使用ECharts.JS -->
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    <script src='js/esl.js'></script>
+    <script src='js/config.js'></script>
+    <script src="js/facePrint.js"></script>
+
+
+    <link rel="stylesheet" href="css/reset.css">
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".headerpage").load("header.html");
+        });
+    </script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        /*.menu{font-size:12px;position:relative;z-index:100;}*/
+        #menu ul{width:136px;height:50px;list-style:none;}
+        #menu ul li{line-height:35px;text-align:center;list-style:none;cursor:pointer;}
+        #menu ul li p{border:1px solid #ff000000;display:none;}
+        #menu ul li:hover p{display:block;}
+        #menu ul li p a{display:block;cursor:default;border-top:1px solid #999;}
+    </style>
+</head>
+<body onload="loadData()">
+<!-- 顶部导航 -->
+<div class="headerpage"></div>
+<div id="content" style="margin:40px 50px;width: 750px;height:600px;float: left">
+    <div id="myBarDiv" style="height:100%; width: 750px;display:inline-block" ></div>
+
+</div>
+<div id="content2" style="margin:40px 50px;width: 750px;height:600px;float: right">
+    <div id="myBarDiv2" style="height:100%; width: 750px;display:inline-block" ></div>
+
+</div>
+
+
+<script src="json/heatmap.js"></script>
+<script src="json/period.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>每日活跃情况分析</title>
+    <!-- 使用单文件引入的方式使用ECharts.JS -->
+    <script src="js/echarts.common.min.js" charset="UTF-8"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <!--<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>-->
+
+    <script type="text/javascript" src="js/drillDown.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    <script src='js/esl.js'></script>
+    <script src='js/config.js'></script>
+    <script src="js/facePrint.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".headerpage").load("header.html");
+        });
+    </script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        /*.menu{font-size:12px;position:relative;z-index:100;}*/
+        #menu ul{width:136px;height:50px;list-style:none;}
+        #menu ul li{line-height:35px;text-align:center;list-style:none;cursor:pointer;}
+        #menu ul li p{border:1px solid #ff000000;display:none;}
+        #menu ul li:hover p{display:block;}
+        #menu ul li p a{display:block;cursor:default;border-top:1px solid #999;}
+    </style>
+</head>
+<body >
+<!-- 顶部导航 -->
+<div class="headerpage"></div>
+<div id="content" style="margin:40px auto;width:100%;height:600px">
+    <div style="width: 100px;height: 20px;margin-left: 15%">
+        <button id='return-button' style="width: 70px;height: 50px" value=''>返回</button>
+    </div>
+    <div id="myBarDiv" style="height:100%; width: 100%;display:inline-block" ></div>
+
+
+</div>
+
+<script type="text/javascript">
+    var dom = document.getElementById("myBarDiv");
+    var myChart = echarts.init(dom);
+    var option = drillDown.getOption();
+    console.log(option);
+    drillDown.initChart(myChart,option);
+
+    $('#return-button').on('click',function(){
+        var myChart = echarts.init(dom);
+        var option = drillDown.getOption();
+        console.log(option);
+        drillDown.initChart(myChart,option);
+    });
+</script>
+
+
+</body>
+</html>

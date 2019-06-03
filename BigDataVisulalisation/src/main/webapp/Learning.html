@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>平均学习时长和学习行为次数分析</title>
+    <!-- 使用单文件引入的方式使用ECharts.JS -->
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    <script src='js/esl.js'></script>
+    <script src='js/config.js'></script>
+    <script src="js/facePrint.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#index").addClass("active");
+            $(".headerpage").load("header.html");
+        });
+    </script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        /*.menu{font-size:12px;position:relative;z-index:100;}*/
+        #menu ul{width:136px;height:50px;list-style:none;}
+        #menu ul li{line-height:35px;text-align:center;list-style:none;cursor:pointer;}
+        #menu ul li p{border:1px solid #ff000000;display:none;}
+        #menu ul li:hover p{display:block;}
+        #menu ul li p a{display:block;cursor:default;border-top:1px solid #999;}
+    </style>
+</head>
+<body onload="loadData()">
+<!-- 顶部导航 -->
+<div class="headerpage"></div>
+<div id="content" style="margin:40px auto;width:100%;height:600px">
+    <div id="myBarDiv" style="height:100%; width: 100%;display:inline-block" ></div>
+
+
+</div>
+
+
+<script type="text/javascript">
+    <!--这个是柱状图-->
+    function loadData(option) {
+        $.ajax({
+            type : 'post',  //传输类型
+            async : false,  //同步执行
+            url : 'learning.do', //web.xml中注册的Servlet的url-pattern
+            timeout : 1000,
+            data : {},
+            dataType : 'json', //返回数据形式为json
+            success : function(data) {
+                console.log(typeof data);
+                console.log(data);
+                console.log(data.LearningNumber.studyTimes);
+                console.log(data.LearningNumber.updatedDate);
+                console.log(data.LearningStuday.avgStudyTime);
+                if (data) {
+                    //初始化xAxis[0]的data
+                    option.xAxis[0].data = data.LearningNumber.updatedDate;
+                    /*for (var i=0; i<data.x.length; i++) {
+                        option.xAxis[0].data.push(data.x[i].name);
+                    }*/
+                    //初始化series[0]的data
+                    option.series[1].data = data.LearningNumber.studyTimes;
+                    option.series[0].data = data.LearningStuday.avgStudyTime;
+                    /*for (var i=0; i<data.y.length; i++) {
+                        option.series[0].data.push(data.y[i].num);
+                    }*/
+                }
+            },
+            error : function(errorMsg) {
+                alert("加载数据失败");
+            }
+        });//AJAX
+    }//loadData()
+
+    var myChart = echarts.init(document.getElementById('myBarDiv'));
+    window.onresize = myChart.resize;
+    var option = {
+        backgroundColor: '#394056',
+        title: {
+            text: '平均学习时长和学习行为次数分析',
+            textStyle: {
+                fontWeight: 'normal',
+                fontSize: 16,
+                color: '#F1F1F3'
+            },
+            left: '6%'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                lineStyle: {
+                    color: '#57617B'
+                }
+            }
+        },
+        dataZoom: [{
+            type: 'inside'
+        }],
+        legend: {
+            icon: 'rect',
+            itemWidth: 14,
+            itemHeight: 5,
+            itemGap: 13,
+            data: ['平均学习时长', '学习行为次数'],
+            right: '4%',
+            textStyle: {
+                fontSize: 12,
+                color: '#F1F1F3'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            boundaryGap: false,
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#c3dbff',  //更改坐标轴文字颜色
+                    fontSize : 14      //更改坐标轴文字大小
+                }
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#57617B'
+                }
+            },
+
+            //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        }],
+        yAxis: [{
+            type: 'value',
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#57617B'
+                }
+            },
+            axisLabel: {
+                margin: 10,
+                textStyle: {
+                    color: '#c3dbff',  //更改坐标轴文字颜色
+                    fontSize: 14
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: '#57617B'
+                }
+            }
+        }],
+        series: [{
+            name: '平均学习时长',
+            type: 'line',
+            smooth: true,
+            lineStyle: {
+                normal: {
+                    width: 1
+                }
+            },
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(0, 136, 212, 0.3)'
+                    }, {
+                        offset: 0.8,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0.1)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)'
+                }
+            },
+            //data: [97.3,99.2,99.3,100.0,99.6,90.6,80.0,91.5,69.8,67.5,90.4,84.9]
+        }, {
+            name: '学习行为次数',
+            type: 'line',
+            smooth: true,
+            lineStyle: {
+                normal: {
+                    width: 1
+                }
+            },
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(219, 50, 51, 0.3)'
+                    }, {
+                        offset: 0.8,
+                        color: 'rgba(219, 50, 51, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0.1)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(219,50,51)'
+                }
+            },
+            //data: [84.2,81.0,67.5,72.1,43.7,88.5,91.9,101.8,79.7,87.6,92.9,0]
+        }, ]
+    };
+
+    //加载数据到option
+    loadData(option);
+    //设置option
+    myChart.setOption(option);
+
+</script>
+
+
+</body>
+</html>

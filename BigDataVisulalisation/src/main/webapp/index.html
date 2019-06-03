@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src='js/esl.js'></script>
+    <script src='js/config.js'></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+
+
+    <title>BigDataVisualization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <!--<link href="css/index.css" rel="stylesheet">-->
+    <link href="http://jic2.talkingdata.com/observatory/mi/css/iconfont.css" rel="stylesheet"/>
+    <![endif]-->
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#index").addClass("active");
+            $(".headerpage").load("header.html");
+            getLoginName();//获取用户登录名
+        });
+    </script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        /*.menu{font-size:12px;position:relative;z-index:100;}*/
+        #menu ul{width:136px;height:50px;list-style:none;}
+        #menu ul li{line-height:35px;text-align:center;list-style:none;cursor:pointer;}
+        #menu ul li p{border:1px solid #ff000000;display:none;}
+        #menu ul li:hover p{display:block;}
+        #menu ul li p a{display:block;cursor:default;border-top:1px solid #999;}
+    </style>
+</head>
+
+<body >
+<div class="headerpage"></div>
+<div class="row">
+    <div class="col-md-12 allcount">
+        <div class="content">
+
+            <div class="col-md-2 part"></div>
+            <div class="col-md-4">
+
+                <div style="float:left;margin-left: 20px;margin-top: 10px">
+                    <caption class="description">
+                        <button type="button" class="btn btn-large btn-primary">平台情况</button>
+                    </caption>
+                </div>
+                    <div id="content" style="width:500px;height:250px;">
+
+                        <div id="myBarDiv" style="height:260px; width: 500px;display:inline-block"></div>
+
+                    </div>
+                
+            </div>
+            <div class="col-md-4">
+                <table class="table">
+                    <caption class="description">
+                        <button type="button" class="btn btn-large btn-primary">Top 课程</button>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>名称</th>
+                        <th>比例</th>
+                    </tr>
+                    </thead>
+                    <tbody id="courseTr">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2 part"></div>
+
+
+            <div class="col-md-8 col-md-offset-2 part">
+                <div class="col-md-12">
+                    <div id="content2" style="width:1000px;height:500px;">
+                        <div id="myBarDiv2" style="height:500px; width: 1000px;display:inline-block"></div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function compare(property){
+        return function(a,b){
+            var value1 = parseFloat(a[property]);
+            var value2 = parseFloat(b[property]);
+            //return value1 - value2; 从小到大排序
+            return value2 - value1; 从大到小排序
+        }
+    }
+
+    var strArray = [];//有数据就加入
+    var strOrder ;
+    var isshow = true;
+    var div = document.getElementById('myBarDiv');
+    var width = div.style.width;
+
+    var week=[];
+    var courseSum;
+
+    <!--这个是柱状图-->
+    function loadData(option,trait) {
+        $.ajax({
+            type: 'post',  //传输类型
+            async: false,  //同步执行
+            url: 'index.do', //web.xml中注册的Servlet的url-pattern
+            timeout: 1000,
+            data: {},
+            dataType: 'json', //返回数据形式为json
+            success: function (data) {
+                if (trait==1) {
+
+                    for (var i = 0; i < data.courseNum; i++) {
+                        /*strArray.sort(sortId);
+                        for(var j=0;j<strArray.length;j++) {
+                            $('#courseTr').append("<tr>\n" + "<td>"+j+"</td>\n" +
+                                "                                <td>"+strArray[j].courseName+"</td>\n" +
+                                "                                <td>"+strArray[j].rate+"</td>\n" +
+                                "                            </tr>");
+                        }*/
+
+                        //console.log(data.course[i]);
+                        var flag = true;
+
+                        for (var j = 0; j < strArray.length; j++) {
+                            //console.log("strArray["+i+"]:"+strArray[j]);
+                            if (strArray[j].courseName == data.course[i].courseName) {//有重复
+                                flag = false;
+                            }
+                        }
+                        if (flag == true) {
+
+                            strArray.push({courseName: data.course[i].courseName, rate: data.course[i].rate});
+                        }
+                    }
+
+                    console.log(strArray)
+                    // console.log(strArray);
+                    /*
+
+                    $('#courseTr').append(strArray[j]);
+                    $('#courseTr').append("</td></tr>");*/
+                    if (data) {
+                        option.series[0].data[0].value = data.courseNum;
+                        option.series[0].data[1].value = data.studentNum;
+                        //初始化xAxis[0]的data
+                        // option.xAxis.data = data.x;
+                        /*for (var i=0; i<data.x.length; i++) {
+                            option.xAxis[0].data.push(data.x[i].name);
+                        }*!/
+                        //初始化series[0]的data
+
+                        /!*for (var i=0; i<data.y.length; i++) {
+                            option.series[0].data.push(data.y[i].num);
+                        }*/
+
+                        //  根据rate排序
+                        strArray.sort(compare('rate'));
+                        strOrder=strArray;
+                        console.log(strOrder);
+                        console.log(strOrder.length);
+
+                        if(isshow==true){
+
+                            for (var i = 0; i < strOrder.length; i++) {
+                                isshow = false;
+                                $('#courseTr').append("<tr>\n" + "<td>"+(i+1)+"</td>\n" +
+                                    "                                <td>"+strOrder[i].courseName+"</td>\n" +
+                                    "                                <td>"+strOrder[i].rate+"</td>\n" +
+                                    "                            </tr>");
+                            }
+                        }
+                    }
+                    console.log(data);
+                    week=data.week;
+                    week.sort(compare('activityNum'));
+                    console.log(typeof week);
+                    console.log( week);
+                    courseSum=data.courseSum;
+
+                    /*weekord = week;
+                    weekord.sort(compare('weekNum'));
+
+                    console.log(typeof weekord);
+                    console.log( weekord);*/
+                }else if(trait==2){
+
+                   /* console.log(data);
+
+                    week=data.week;
+                    console.log(typeof week);
+                    console.log( week);*/
+                }
+            },
+            error: function (errorMsg) {
+                alert("加载数据失败");
+            }
+        });//AJAX
+    }//loadData()
+
+    var myChart = echarts.init(document.getElementById('myBarDiv'));
+    var myChart2 = echarts.init(document.getElementById('myBarDiv2'));
+    window.onresize = myChart.resize;
+    var pathSymbols = {
+
+        course: 'image://data:data:image/png;base64,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',
+        student: 'image://data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTQ1NjQ0MTgxMjYwIiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjM2MDkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj5AZm9udC1mYWNlIHsgZm9udC1mYW1pbHk6IHVjLW5leHVzLWljb25mb250OyBzcmM6IHVybCgiY2hyb21lLWV4dGVuc2lvbjovL3BvZ2lqaG5sY2ZtY3BwZ2ltY2FjY2RrbWJlZGprbWhpL3Jlcy9mb250XzlxbW1pOGI4anN4eGJ0OS53b2ZmIikgZm9ybWF0KCJ3b2ZmIiksIHVybCgiY2hyb21lLWV4dGVuc2lvbjovL3BvZ2lqaG5sY2ZtY3BwZ2ltY2FjY2RrbWJlZGprbWhpL3Jlcy9mb250XzlxbW1pOGI4anN4eGJ0OS50dGYiKSBmb3JtYXQoInRydWV0eXBlIik7IH0KPC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTUxMy40IDk1Mi42bDI3NS4zLTIuM3MtMTMuOC0yMjAuOC0yMDIuNS0yNTUuMmMtNTEuNC00LjMtNzQtMi42LTc0LTIuNnYwLjNjMC4xIDE2MSAxLjIgMjU5LjggMS4yIDI1OS44eiIgZmlsbD0iI0ZGRkZGRiIgcC1pZD0iMzYxMCI+PC9wYXRoPjxwYXRoIGQ9Ik01MTAgOTUyLjZsLTI3NC4yLTIuM3MxMy43LTIyMSAyMDEuNy0yNTUuNGM1MS4yLTQuMyA3My42LTIuNiA3My42LTIuNnYwLjNjMCAxNjEuMi0xLjEgMjYwLTEuMSAyNjB6IiBmaWxsPSIjRTFFNkY3IiBwLWlkPSIzNjExIj48L3BhdGg+PHBhdGggZD0iTTQwOCA1OTkuMWgxOTIuNnYxNDkuNHMtNDcuNSA3NC45LTk1LjcgNzQuOWMtNDguMSAwLTk2LjktNzQuOS05Ni45LTc0LjlWNTk5LjF6IiBmaWxsPSIjRkZEREI4IiBwLWlkPSIzNjEyIj48L3BhdGg+PHBhdGggZD0iTTQwOCA3MzEuNVY1ODIuMWgxOTIuNnY4MS41IiBmaWxsPSIjRTVDNkE1IiBwLWlkPSIzNjEzIj48L3BhdGg+PHBhdGggZD0iTTQxMCA2NDYuN2MxNy4yIDI5IDQuMiA3MS41IDIwLjYgOTYuMSAxNi41IDI0LjYgNDkuMyA0Mi4zIDc3LjIgNjguMi0zNi43IDE3LjEtOTcuNyA1LjctMTI0LjctMzkuNy0yNy00NS40LTkuOC0xMDcuNiAyNi45LTEyNC42eiIgZmlsbD0iI0M3NEE0QSIgcC1pZD0iMzYxNCI+PC9wYXRoPjxwYXRoIGQ9Ik00ODIuOCA3ODAuM2g1NC40YzEyLjUgMCAyMi43IDEwLjEgMjIuNyAyMi43bC02LjggMjQuOWMwIDEyLjUtMTYgMjIuNy0yNC41IDIyLjdoLTM3LjFjLTguNSAwLTI0LjUtMTAuMS0yNC41LTIyLjdsLTYuOC0yNC45Yy0wLjEtMTIuNSAxMC4xLTIyLjcgMjIuNi0yMi43eiIgZmlsbD0iI0UyNTY1NiIgcC1pZD0iMzYxNSI+PC9wYXRoPjxwYXRoIGQ9Ik01MDUuOCA4MjMuNGMtMTYuNSAzLjEtMjYuOSAyNS4xLTMyLjEgNDUuMy02LjYgMjUuOC0xMC4zIDU2LjMtMTMuMiA4Mi42IDMzLjQgMCA0Mi42IDAgNzcuMSAwLjQgMTIuMS0yOC43IDE0LjktNjQuNi0wLjUtOTguOS03LjYtMTcuMS0xNy42LTMyLTMxLjMtMjkuNHpNNjAzLjMgNjQ2LjdjLTE3LjIgMjguOS00LjIgNzEuNC0yMC43IDk2LTE2LjUgMjQuNS00OS40IDQyLjItNzcuMyA2OC4xIDM2LjggMTcgMTA5LjEtNS41IDEzNi4yLTUwLjggMjctNDUuNC0xLjUtOTYuMy0zOC4yLTExMy4zeiIgZmlsbD0iI0UyNTY1NiIgcC1pZD0iMzYxNiI+PC9wYXRoPjxwYXRoIGQ9Ik01MTEuOSAxNzAuN2MtMTMxLjEgMC0yMjYuMyAxMDcuOS0yMjYuMyAyNDEgMCA0NC43IDExLjQgMTIyLjQgMzEuMiAxNTguMiAzOS4xIDcwLjggMTY0LjkgODguOSAxOTUuNCA5MC4yIDAuMS0xMjcuOS0wLjMtMzIzLjMtMC4zLTQ4OS40eiIgZmlsbD0iI0Y1RDRCMSIgcC1pZD0iMzYxNyI+PC9wYXRoPjxwYXRoIGQ9Ik01MTIuNSAxNzAuN2MxMzEuMSAwIDIyNi40IDEwNy45IDIyNi40IDI0MSAwIDQ0LjctMTEuNCAxMjIuNC0zMS4yIDE1OC4yLTM5LjIgNzAuOC0xNjUgODguOS0xOTUuNSA5MC4yIDAtMTI4IDAuMy0zMjMuMyAwLjMtNDg5LjR6IiBmaWxsPSIjRkZEREI4IiBwLWlkPSIzNjE4Ij48L3BhdGg+PHBhdGggZD0iTTU2OS4xIDY2LjVsLTUwLjMgNTQuNHMtMTQ2LjItMi45LTIyMi4xIDg4LjRDMjI2LjIgMjk0IDI2Ni40IDQ0OCAyODEuMyA0NjMuMWMtMS4xLTYuOCAzNyA5LjIgMzMuOC0yLjMtMzEuOC0xMTMuNSA4My45LTQxLjQgMTY3LjEtNjEuMiAxMTQuNi0yNy4zIDE4NC45LTc0IDE5OC45LTYxLjIgMzQuNSAzOC41IDMyIDEzOC4yIDMyIDEzOC4yczY1LjUtNTMuNiA1OS40LTE1MS44Yy00LjItNjcuNC01MC43LTEzNS4yLTg0LjUtMTU2LjQtMzMuOS0yMS4yLTU4LjMtMzEuNS04Ni44LTM2LjMgNi05LjggOS4yLTM0IDkuMi0zNGwtMzYuNiAyMi43LTQuNy01NC4zeiIgZmlsbD0iIzMzMzMzMyIgcC1pZD0iMzYxOSI+PC9wYXRoPjxwYXRoIGQ9Ik03NjIuMyA0MDUuM2MxNS4zIDUuMiAxOS43IDMzLjIgOS45IDYyLjUtOS45IDI5LjQtMzAuMyA0OS00NS42IDQzLjgtMTUuMy01LjItMTkuNy0zMy4yLTkuOS02Mi41czMwLjItNDguOSA0NS42LTQzLjh6IiBmaWxsPSIjRkZEREI4IiBwLWlkPSIzNjIwIj48L3BhdGg+PHBhdGggZD0iTTI2NS43IDQwOC42Yy0xNS4zIDUuMi0xOS43IDMzLjYtOS45IDYzLjQgOS45IDI5LjggMzAuMyA0OS42IDQ1LjYgNDQuNCAxNS4zLTUuMiAxOS43LTMzLjYgOS45LTYzLjQtOS45LTI5LjctMzAuMy00OS42LTQ1LjYtNDQuNHoiIGZpbGw9IiNGNUQ0QjEiIHAtaWQ9IjM2MjEiPjwvcGF0aD48cGF0aCBkPSJNNDk2LjIgODIzLjdjLTEzLjUgMy4yLTIyIDI1LjEtMjYuMiA0NS40LTUuMyAyNS43LTguMyA1NS45LTEwLjcgODIuMiAxOS43IDAuMSAyMy41IDAuMSAzOC4yLTAuMiAyMi44LTMxLjMgMzkuNi02NC40IDM3LjQtMTAwLjQtMS4xLTE4LjQtMjcuNS0yOS42LTM4LjctMjd6IiBmaWxsPSIjQzc0QTRBIiBwLWlkPSIzNjIyIj48L3BhdGg+PC9zdmc+'
+    };
+
+    var labelSetting = {
+        normal: {
+            show: true,
+            position: 'right',
+            offset: [0, 0],
+            textStyle: {
+                fontSize: 18
+            }
+        }
+    };
+
+
+    var option = [{
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            containLabel: true,
+            left: 20
+        },
+        yAxis: {
+            data: ['课程数', '学生数'],
+            inverse: true,
+            axisLine: {show: false},
+            axisTick: {show: false},
+            axisLabel: {
+                margin: 20,
+                textStyle: {
+                    fontSize: 20,
+                    color: '#FFFFFF'
+                }
+            },
+            axisPointer: {
+                label: {
+                    show: true,
+                    margin: 30
+                }
+            }
+        },
+        xAxis: {
+            splitLine: {show: false},
+            axisLabel: {show: false},
+            axisTick: {show: false},
+            axisLine: {show: false}
+        },
+        series: [{
+            type: 'pictorialBar',
+            label: labelSetting,
+            symbolRepeat: true,
+            symbolSize: ['100%', '70%'],
+            barCategoryGap: '50%',
+            data: [{
+                value: 30,
+                symbol: pathSymbols.course
+            }, {
+                value: 78,
+                symbol: pathSymbols.student
+            }]
+        }]
+    }, {
+        //backgroundColor: 'rgba(255,255,255,0)',
+        tooltip : {
+            formatter: "{a} <br/>{c} {b}"
+        },
+        toolbox: {
+            show: true,
+            itemSize:20,
+            feature: {
+
+                dataView: {readOnly: false},
+
+
+                saveAsImage: {}
+            },
+            iconStyle:{
+                normal:{
+                    color:'white',//设置颜色
+                }
+            },
+
+
+
+        },
+        series : [
+            {
+                name: '周活跃健康度',
+                type: 'gauge',
+                z: 3,
+                min: 0,
+                max: 100,
+                splitNumber: 10,
+                radius: '50%',
+                axisLine: {            // 坐标轴线
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        width: 10
+                    }
+                },
+                axisTick: {            // 坐标轴小标记
+                    length: 15,        // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: 'auto'
+                    }
+                },
+                splitLine: {           // 分隔线
+                    length: 20,         // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                        color: 'auto'
+                    }
+                },
+                title : {
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder',
+                        fontSize: 20,
+                        fontStyle: 'italic',
+                        color:'RED',
+                    }
+                },
+                detail : {
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder'
+                    }
+                },
+                data:[{value: 40, name: '周活跃健康度'}]
+            },
+            {
+                name: '周活跃学生',
+                type: 'gauge',
+                center: ['22%', '55%'],    // 默认全局居中
+                radius: '35%',
+                min:0,
+                max:100,
+                endAngle:45,
+                splitNumber:8,
+                axisLine: {            // 坐标轴线
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        width: 8
+                    }
+                },
+                axisTick: {            // 坐标轴小标记
+                    length:12,        // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: 'auto'
+                    }
+                },
+                splitLine: {           // 分隔线
+                    length:20,         // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                        color: 'auto'
+                    }
+                },
+                pointer: {
+                    width:5
+                },
+                title: {
+                    offsetCenter: [0, '-30%'],       // x, y，单位px
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder',
+                        fontSize: 16,
+                        //fontStyle: 'italic',
+                        color:'RED',
+                    }
+                },
+                detail: {
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder'
+                    }
+                },
+                data:[{value: 6458, name: '周活跃学生'}]
+            },
+            {
+                name: '峰值周活跃学生',
+                type: 'gauge',
+                center: ['79%', '55%'],    // 默认全局居中
+                radius: '35%',
+                min:0,
+                max:100,
+                startAngle:140,
+                endAngle:-45,
+                splitNumber:8,
+                axisLine: {            // 坐标轴线
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        width: 8
+                    }
+                },
+                axisTick: {            // 坐标轴小标记
+                    length:12,        // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: 'auto'
+                    }
+                },
+                splitLine: {           // 分隔线
+                    length:20,         // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                        color: 'auto'
+                    }
+                },
+                pointer: {
+                    width:5
+                },
+                title: {
+                    offsetCenter: [0, '-30%'],       // x, y，单位px
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder',
+                        fontSize: 16,
+                        //fontStyle: 'italic',
+                        color:'#FFFFFF'
+                    }
+                },
+                detail: {
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder'
+                    }
+                },
+                data:[{value: 2583, name: '峰值周活跃学生'}]
+            }
+        ]
+    }];
+    //加载数据到option
+    loadData(option[0],1);
+    //设置option
+    myChart.setOption(option[0]);
+    setInterval(function (){
+        //loadData(option[1],2);
+            //console.log(week);
+            i = Math.floor(Math.random() * (week.length - 0 + 1)) + 0;
+            console.log(i)
+            option[1].series[0].data[0].value =(week[i].activityNum/week[0].activityNum).toFixed(3)*100;
+            option[1].series[1].data[0].value = week[i].activityNum;
+            option[1].series[2].data[0].value =  week[0].activityNum;
+
+        myChart2.setOption(option[1], true);
+    },2000);
+
+</script>
+<script>
+    getLoginName();
+
+</script>
+
+</body>
+</html>
