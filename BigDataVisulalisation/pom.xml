@@ -18,7 +18,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <spring.version>4.2.4.RELEASE</spring.version>
-    <hadoop.version>2.7.3</hadoop.version>
+    <hadoop.version>3.2.3</hadoop.version>
     <hbase.version>1.4.4</hbase.version>
   </properties>
 
